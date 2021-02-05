@@ -3,7 +3,7 @@ requests
 IPython
 quandl
 yfinance
-yahoo_fin
+yahoo_fin>=0.8.6
 ftplib
 io
 json
