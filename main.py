@@ -1,7 +1,6 @@
 import pandas as pd
 from IPython.display import display
 import requests
-import yfinance as yf
 from yahoo_fin import stock_info as si
 import streamlit as st
 
