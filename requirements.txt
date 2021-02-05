@@ -1,0 +1,9 @@
+pandas
+requests
+IPython
+quandl
+yfinance
+ftplib
+io
+json
+requests_html
