@@ -3,7 +3,7 @@ requests
 IPython
 quandl
 yfinance
-yahoo_fin.stock_info
+yahoo_fin
 ftplib
 io
 json
