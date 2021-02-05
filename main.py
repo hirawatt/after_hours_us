@@ -1,7 +1,7 @@
 import pandas as pd
 from IPython.display import display
 import requests
-from yahoo_fin import stock_info as si
+import yahoo_fin.stock_info as si
 import streamlit as st
 
 st.title('After Hours Volume as a Percentage of Float')
