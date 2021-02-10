@@ -1,6 +1,5 @@
 pandas
 requests
-IPython
 quandl
 yfinance
 yahoo_fin>=0.8.6
@@ -8,3 +7,5 @@ ftplib
 io
 json
 requests_html
+numpy
+decimal
