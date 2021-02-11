@@ -16,7 +16,6 @@ def after_hours_usa():
 
     # Symbol     Company Name    After HoursPrice    After HoursVol      After HoursChg      After HoursChg %
     main_df = pd.read_html(after_hours_url)[2]
-    st.dataframe(main_df)
 
     # List of Ticker Symbols
     tickers = main_df['Symbol'].tolist()
@@ -57,4 +56,4 @@ def after_hours_usa():
 
     # Company Name      After HoursVol      Float Shares        Stock Symbol
     final_df = data_df.join(df3)
-    return final_df
+    return final_df, main_df

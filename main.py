@@ -14,12 +14,25 @@ st.set_page_config(page_title='After Hrs US Data', page_icon=None, layout='cente
 load_dotenv()
 token = os.getenv('DISCORD_WEBHOOK_AFTER_HOURS')
 
-st.title('After Hours Volume as a Percentage of Float')
+st.title('US After Hours Volume as a Percentage of Float')
+
+st.write('''
+> Eastern Standard Time (EST) is **10 hrs 30 mins** behind India Standard Time (IST)
+
+||Market Hours|After Hours|
+|:-:|:-:|:-:|
+|US|9:30 am - 4:00 pm|4:00 pm to 8:00 pm|
+|India|8:00 pm - 2:30 pm|2:30 pm - 6:30 am|
+''')
+
 with st.empty():
     st.write(f"⏳ Data is being Processed")
-    my_dataframe = after_hours_usa()
+    my_dataframe, main_df = after_hours_usa()
     st.write("✔️ Data Processed")
 
+st.subheader('Companies with highest after hours trading volume')
+st.dataframe(main_df)
+st.subheader('After Hours Volume as a Percentage of Float')
 st.dataframe(my_dataframe)
 def filedownload(df):
     csv = df.to_csv(index=False)
