@@ -56,4 +56,4 @@ def after_hours_usa():
 
     # Company Name      After HoursVol      Float Shares        Stock Symbol
     final_df = data_df.join(df3)
-    return final_df, main_df
+    return final_df

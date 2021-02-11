@@ -27,11 +27,11 @@ st.write('''
 
 with st.empty():
     st.write(f"⏳ Data is being Processed")
-    my_dataframe, main_df = after_hours_usa()
+    my_dataframe = after_hours_usa()
     st.write("✔️ Data Processed")
 
-st.subheader('Companies with highest after hours trading volume')
-st.dataframe(main_df)
+#st.subheader('Companies with highest after hours trading volume')
+#st.dataframe(main_df)
 st.subheader('After Hours Volume as a Percentage of Float')
 st.dataframe(my_dataframe)
 def filedownload(df):
