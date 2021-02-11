@@ -1,11 +1,6 @@
-pandas
-requests
-quandl
-yfinance
-yahoo_fin>=0.8.6
-ftplib
-io
-json
-requests_html
-numpy
-decimal
+requests==2.23.0
+streamlit==0.74.1
+yahoo_fin==0.8.6
+numpy==1.18.4
+pandas==1.0.5
+ipython==7.20.0
