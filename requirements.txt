@@ -4,3 +4,4 @@ yahoo_fin==0.8.6
 numpy==1.18.4
 pandas==1.0.5
 ipython==7.20.0
+lxml
