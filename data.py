@@ -6,8 +6,6 @@ import streamlit as st
 import math
 from numpy import isnan
 
-st.title('After Hours Volume as a Percentage of Float')
-
 @st.cache(suppress_st_warning=True)
 def after_hours_usa():
     # Get After Hours Data from Source
@@ -17,14 +15,13 @@ def after_hours_usa():
     m = {'K': 3,'M': 6, 'B': 9,'T': 12}
 
     # Symbol     Company Name    After HoursPrice    After HoursVol      After HoursChg      After HoursChg %
-    df = pd.read_html(after_hours_url)[2]
-    st.dataframe(df)
+    main_df = pd.read_html(after_hours_url)[2]
 
     # List of Ticker Symbols
-    tickers = df['Symbol'].tolist()
+    tickers = main_df['Symbol'].tolist()
 
     #  Company Name      After HoursVol
-    data_df = df[['Company Name', 'After HoursVol']]
+    data_df = main_df[['Company Name', 'After HoursVol']]
 
     # Get M B to numbers for After Hours Volume
     after_hoursvol = data_df['After HoursVol'].tolist()
