@@ -34,8 +34,8 @@ tabular_data = tabulate(my_dataframe, tablefmt="grid")
 msg = {
     "content": tabular_data
     }
-x = requests.post(token, data = msg)
-st.write(x)
+#x = requests.post(token, data = msg)
+#st.write(x)
 
 st.write('''
 ## Join [Discord Server](https://discord.gg/S37AEY4TKN) for updates and data notifications.
