@@ -16,10 +16,14 @@ def after_hours_usa():
 
     # Symbol     Company Name    After HoursPrice    After HoursVol      After HoursChg      After HoursChg %
     main_df = pd.read_html(after_hours_url)[2]
-
+    print(main_df)
     # List of Ticker Symbols
-    tickers = main_df['Symbol'].tolist()
-
+    tickers = main_df['Symbol  Symbol'].tolist()
+    #tickers = ticker.tolist()
+    ticker = []
+    for i in range(10):
+        ticker = tickers[i].rsplit[' ', 1](1)
+    print(ticker)
     #  Company Name      After HoursVol
     data_df = main_df[['Company Name', 'After HoursVol']]
 
@@ -57,3 +61,6 @@ def after_hours_usa():
     # Company Name      After HoursVol      Float Shares        Stock Symbol
     final_df = data_df.join(df3)
     return final_df
+
+if __name__ == "__main__":
+    after_hours_usa()
