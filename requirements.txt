@@ -3,7 +3,7 @@ numpy==1.22.0
 requests==2.23.0
 yahoo_fin==0.8.6
 pandas==1.0.5
-streamlit==0.74.1
+streamlit==1.11.1
 ipython==8.10.0
 python-dotenv==0.15.0
 lxml
